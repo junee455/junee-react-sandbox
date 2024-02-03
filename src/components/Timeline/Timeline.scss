@@ -1,0 +1,85 @@
+.TimelineContainer {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+
+  .hideScrollbar {
+    // overflow: scroll;
+    // position: relative;
+
+    &::-webkit-scrollbar {
+      display: none;
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+  }
+
+  .tracksContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    background-color: transparent;
+    padding: 0.5rem;
+
+    grid-template-columns: max-content auto;
+    gap: 0.3rem;
+    align-items: stretch;
+
+    .addTrackButton {
+      max-width: 2rem;
+    }
+
+    button {
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+    }
+
+    .trackRow {
+      // overflow: hidden;
+    }
+
+    .timeHints {
+      text-align: center;
+
+      .hint {
+        position: absolute;
+        bottom: 0;
+        content: '';
+
+        .hintText {
+          position: absolute;
+          right: -1.2rem;
+          top: -1.5rem;
+        }
+
+        .hintBullet {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 6px;
+          border: 1px solid white;
+          bottom: -4px;
+          // transform: translateX(-50%);
+        }
+      }
+
+      .subBullet {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 4px;
+        border: 1px solid grey;
+        bottom: -4px;
+        left: 50%;
+      }
+
+      grid-column-start: 2;
+    }
+  }
+}

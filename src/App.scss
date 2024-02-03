@@ -1,0 +1,23 @@
+.appContainer {
+  display: block;
+  box-sizing: border-box;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  border: 2px solid black;
+  margin: 1rem;
+}
+
+.draggableBlock {
+  padding: 1rem;
+  border: 2px solid black;
+  width: fit-content;
+  margin: 1rem;
+  user-select: none;
+  cursor: pointer;
+}
+
+.draggable {
+  cursor: default !important;
+  width: fit-content;
+  position: absolute;
+}

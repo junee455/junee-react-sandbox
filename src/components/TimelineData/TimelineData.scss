@@ -1,0 +1,53 @@
+.TimelineData {
+}
+
+.TimelineExample {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  %commonBlock {
+    padding: 1rem;
+    border: 1px solid white;
+  }
+
+  .topBlock {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    flex-grow: 1;
+
+    .menu {
+      @extend %commonBlock;
+    }
+
+    .preview {
+      @extend %commonBlock;
+      flex-grow: 1;
+    }
+
+    .activeBlock {
+      @extend %commonBlock;
+      flex-grow: 1;
+      min-width: 20%;
+      max-width: 15%;
+    }
+  }
+
+  .timeline {
+    @extend %commonBlock;
+
+    .row {
+      width: 100%;
+      display: flex;
+
+      .fragment {
+        @extend %commonBlock;
+        max-width: fit-content;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@mixin with-border {
+  box-shadow: inset 0 0 0 2px white;
+  z-index: 888;
+}
+
+.elevated {
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  @include with-border;
+}
+
+.dragWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  content: '';
+  cursor: grabbing;
+}
+
+.timelineFragmentWrapper {
+  display: block;
+  position: absolute;
+  text-wrap: nowrap;
+
+  .timelineFragment {
+    transition: 0.1s;
+    overflow: hidden;
+    border-radius: 0.2rem;
+    background-color: #574732;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    white-space: nowrap;
+
+    user-select: none;
+
+    cursor: pointer;
+
+    &:hover {
+      @include with-border;
+    }
+  }
+}
